@@ -20,15 +20,11 @@ namespace DungeonExplorer
         {
             InitializeComponent();
 
+            //Initialize starting location
+            Location location = new Location(1, "Home", "It's your home.");
+
             //Default start values of new player
-            _player = new Player
-            {
-                CurrentHitPoints = 10,
-                MaximumHitPoints = 10,
-                Gold = 20,
-                Experience = 0,
-                Level = 1
-            };
+            _player = new Player(10, 10, 20, 0, 1);
 
             //set the labels on the main form
             lblHitPoints.Text = _player.CurrentHitPoints.ToString();
